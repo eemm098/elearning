@@ -1,0 +1,639 @@
+:root {
+  --blue: #007788;
+  --light-blue:#00afca;
+}
+/* global rules */
+
+* {
+  text-transform: capitalize;
+  transition: all 0.2s;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+body {
+  font-size: 1.8rem;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.scroll-to-top{
+  position: fixed;
+  right: 2rem;
+  bottom: 6rem;
+  background-color: var(--blue);
+  width: 5rem ;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  z-index: 999;
+}
+.scroll-to-top a{
+  color: white;
+font-size: 2rem;
+cursor: pointer;
+text-decoration: none;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev{
+  border:none;
+   width: 5rem;
+   height: 5rem;
+   color: var(--blue);
+   background-color: #fff;
+   border-radius: .5rem;
+   box-shadow:0 0 1rem .2rem #aaa;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+   font-size: 2.5rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+   color: #fff;
+   background-color:var(--blue);
+}
+/* end global rules */
+
+/* navbar */
+.navbar-brand {
+  text-transform: none;
+  font-size: 2.7rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+.navbar-brand:hover{
+  color: var(--blue);
+  cursor: pointer;
+}
+.navbar-nav .nav-item {
+  padding: 1rem 3rem;
+}
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover {
+  color: var(--blue) !important ;
+}
+
+.dropdown .dropdown-item {
+  font-size: 1.7rem;
+ padding: 1rem 3rem;
+}
+
+.btn  {
+  background-color: var(--blue);
+  color: white;
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.btn:hover{
+  background-color: white;
+  color: var(--blue);
+  border: .25rem solid var(--blue);
+}
+/* start home  */
+.home {
+  position: relative;
+}
+.home .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.home .carousel .carousel-item {
+  background-size: cover;
+}
+.home .carousel .carousel-inner .carousel-one {
+  background-image: url("../img/carousel-1.jpg");
+}
+.home .carousel .carousel-inner .carousel-two {
+  background-image: url("../img/carousel-2.jpg");
+}
+.home .carousel .carousel-inner .carousel-three {
+  background-image: url("../img/carousel-1.jpg");
+}
+.home .carousel-indicators button {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 50%;
+  border: none;
+}
+.overlay .over {
+  max-width: 50rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4rem;
+}
+.overlay .over span {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--blue);
+}
+.overlay .over h1 {
+  font-size: 4rem;
+  color: white;
+  margin: 1rem 0;
+}
+.overlay .over p {
+  color: rgba(255, 255, 255, 0.644);
+  line-height: 2;
+  margin: 1rem 0;
+}
+.overlay .over .btns button {
+  border: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0.4rem;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+}
+.overlay .over .btns button:first-child{
+  color: white;
+  background-color: var(--blue);
+}
+.overlay .over .btns button:hover:first-child{
+  border: .1rem solid white;
+  background-color: transparent;
+}
+/* end home */
+
+/* start stats */
+.stats {
+  padding: 8rem 0;
+}
+.stats .box {
+  margin: 1rem;
+  text-align: center;
+  background-color: #04bccd25;
+  padding: 2rem;
+}
+.stats .box:hover {
+  color: white;
+  background-color: var(--blue);
+  transform: translateY(-2rem);
+}
+.stats .box:hover i {
+  color: white;
+}
+
+.stats .box i {
+  font-size: 4rem;
+  margin: 2rem 0;
+  color: var(--blue);
+}
+.stats .box h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+/* end stats */
+
+/* start about us */
+.about-us {
+  margin: 4rem 0;
+}
+.about-us .text p i{
+  color: var(--blue);
+  margin-right: .6rem;
+}
+.about-us .img {
+    width: 100%;
+    height: 100%;
+}
+.about-us .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.special-title {
+  color: var(--blue);
+  font-size: 1.8rem;
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+}
+.special-title:before {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 160%;
+  background-color: var(--blue);
+  z-index: -1;
+  left: 0;
+  top: 45%;
+}
+
+.special-title:after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 180%;
+  background-color: var(--blue);
+  z-index: -1;
+  left: 0;
+  top: 65%;
+}
+
+.about-us .text {
+  padding: 3rem;
+}
+.about-us .text h1{
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+.about-us .text > p{
+    color: #555;
+    line-height: 2;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+}
+.about-us .text p{
+    color: #555;
+}
+.about-us .text .btn{
+    width: 20rem;
+    margin: 2rem 0;
+    height: 5rem;
+}
+/* end about us */
+
+
+
+
+
+/* start cat */
+.cat{
+    padding: 8rem 0;
+}
+.cat .special-title::before{
+left: -30%;
+}
+.cat .special-title::after{
+    left: -40%;
+}
+
+.cat h1{
+    margin-bottom:4rem ;
+}
+.cat figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.cat figure:hover img{
+  transform: scale(1.2);
+}
+.cat figure{
+  position: relative;
+margin: 0;
+overflow: hidden;
+height: 100%;
+}
+.cat figure figcaption{
+  position: absolute;
+  background-color: white;
+  right: .3rem;
+  bottom: .3rem;
+  z-index: 2;
+  padding: .6rem 1.2rem;
+}
+/* .cat .col{
+  margin: 0;
+} */
+.cat figure figcaption h2{
+font-size: 1.9rem;
+margin-bottom: .4rem;
+
+}
+.cat figure figcaption p{
+font-size: 1.4rem;
+color: var(--blue);
+}
+/* end cat */
+
+
+
+
+
+/* start courses  */
+.courses{
+  padding: 8rem 0;
+}
+.courses .special-title::before{
+left: -30%;
+}
+.courses .special-title::after{
+  left: -40%;
+}
+
+.courses h1{
+  margin-bottom:4rem ;
+}
+.courses .card{
+  width: 31rem;
+  margin: auto;
+  
+}
+.courses .card figure {
+  position: relative;
+  overflow: hidden;
+}
+.courses .card figure img{
+  width: 100%;
+  height: 100%;
+}
+.courses .card:hover figure img{
+transform: scale(1.2);
+}
+.courses .card figure figcaption{
+  position: absolute;
+  background-color: var(--blue);
+  border: none;
+  bottom: 2rem;
+left: 15%;
+  border-radius: 2rem;
+  padding: .5rem;
+}
+
+.courses .card figure figcaption a{
+ color: white;
+ text-decoration: none;
+ padding: 0 1rem;
+}
+
+.courses .card figure figcaption a:first-child{
+  border-right: .1rem solid #ddd;
+}
+.courses .card .card-body{
+  padding: 0;
+}
+.courses .card .card-title{
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+.courses .card .card-subtitle{
+  margin: 1rem 0;
+
+}
+.courses .card .card-text{
+  margin: 1rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.courses .card .card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.courses .card .card-footer .divider{
+  width: .2rem;
+  background-color: #ddd;
+  height: 4rem;
+}
+/* .courses .card:hover img{
+  transform: scale(1.2);
+} */
+/* end courses */
+
+
+
+
+
+
+
+
+/* start instructor */
+.expert {
+  padding: 8rem 0;
+}
+
+.expert .special-title::before{
+left: -30%;
+}
+.expert .special-title::after{
+  left: -40%;
+}
+
+.expert h1{
+  margin-bottom:4rem ;
+}
+.expert .card{
+  width: 30rem;
+  margin: auto;
+  overflow: hidden;
+}
+.expert .card figure{
+  overflow: hidden;
+}
+.expert .card figure img{
+  width: 100%;
+  height: 100%;
+}
+.expert .card h1{
+  margin: 1rem 0;
+}
+.expert .card figure{
+  position: relative;
+}
+.expert .card .social{
+  position: absolute;
+  bottom: -1rem;
+  left: 25%;
+  background-color: white;
+  padding: .5rem;
+}
+.expert .card .social i{
+font-size: 3rem;
+margin: .8rem;
+color: var(--blue);
+}
+
+.expert .card:hover img{
+  transform: scale(1.2);
+}
+/* end instructor */
+
+
+
+/* start test */
+.test .card {
+  width: 30rem;
+  margin: auto;
+}
+.test .card img{
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+.test .swiper{
+  margin: 1rem 0;
+}
+.test{
+  padding: 10rem 0;
+}
+.test .special-title::before{
+left: -30%;
+}
+.test .special-title::after{
+  left: -40%;
+}
+
+.test h1{
+  margin-top: 1rem;
+
+  margin-bottom:4rem ;
+}
+.test .card{
+  border: none;
+}
+
+.test .card .card-title{
+  margin: 1rem 0;
+}
+
+
+
+/* end test */
+
+
+
+
+
+/* start footer */
+
+.footer {
+  background-color: #181d38;
+ padding-top: 8rem;
+ padding-bottom: 4rem;
+}
+
+.footer .title {
+  color: white;
+  margin: 3rem 0;
+}
+.footer ul {
+  padding: 0;
+  margin: 0;
+}
+.footer ul li {
+  padding: 1rem 0;
+  color: white;
+}
+.footer ul li i{
+  margin-right: 1rem;
+}
+.footer ul li:hover i{
+  margin-right: 2rem;
+}
+.footer .gal{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer img {
+  border: .5rem solid white;
+  width: 100%;
+  height: 100%;
+}
+.footer p{
+  color: white;
+  line-height: 2;
+}
+.footer form input{
+  width: 100%;
+  padding: .7rem 1rem;
+  border: none;
+  border-radius: .5rem;
+  margin: .5rem 0;
+}
+.footer form input.button{
+  color: white;
+  background-color: var(--blue);
+}
+.footer form input.button:hover{
+  border: .1rem solid white;
+  background-color: transparent;
+}
+.footer .container > .divider {
+  height: .1rem;
+  width: 100%;
+  background-color: #ddd;
+  margin: 3rem 0;
+}
+.footer .copyright{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .copyright ul  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .copyright ul li{
+  padding: 1rem;
+}
+.footer .copyright , .footer .copyright ul a {
+  color: white;
+}
+.footer .copyright ul a {
+  text-decoration: none;
+}
+.footer .copyright div > a{
+  color: var(--light-blue)
+}
+.footer .copyright ul .divider{
+  padding: 0;
+  width: .1rem;
+  height: 4rem;
+  background-color: #ddd;
+}
+/* end footer */
